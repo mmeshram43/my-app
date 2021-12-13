@@ -1,0 +1,29 @@
+<div class="container">
+    <h4 style="color: blue;" > {{fund.Name}}</h4>
+    <hr>
+    <h5 style="color:darkgreen;" >Fund Manager</h5>
+    <br>
+        <h5>{{fund.FundManager}}</h5>
+        <p>Managing this fund since May 2009</p>
+        <p>Total experience of 26 years</p>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p>Category : {{fund.Category}} </p>
+                <p>Risk : {{fund.Risk}} </p>
+                <p>Exit Load : {{fund.ExitLoad}} </p>
+                <p>Launch Date : {{fund.LaunchDate}} </p>
+            <button class="btn btn-info" >INVEST NOW</button>
+
+            </div>
+
+            <div class="col">
+                <p>AUM(INR) : {{fund.AUM}}</p>
+                <p>BenchMark :{{fund.Benchmark }} </p>
+                <p>Type Of Schemes : Read More</p>
+
+                <button class="btn btn-primary" (click)="onBack()" >BACK</button>
+            </div>
+
+        </div>
+</div>

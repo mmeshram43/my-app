@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>
+                Log In Here 
+            </h4>
+            <hr>
+          
+            <form  #form="ngForm" >
+
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" placeholder="Enter email" id="email" name="email" ngModel >
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" placeholder="Enter password" id="pwd" name="password" ngModel >
+                  </div>
+                  <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" name="checkIdentity" id="checkIdentity" ngModel > Remember me
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary" (click)="onLogin(form)"  >Log In</button>
+                
+
+            </form>
+        </div>
+
+            
+     
+        <div class="col">
+            <h4>
+                Sign Up  Here 
+            </h4>
+            <hr>
+            <div class="form-group">
+                <label for="email">PAN:</label>
+                <input type="text" class="form-control" placeholder="Enter PAN" id="email">
+              </div>
+              <div class="form-group">
+                <label for="Mobile">Mobile Number:</label>
+                <input type="text" class="form-control" placeholder="Enter Phone Number" id="email">
+              </div>
+    
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" placeholder="Enter Email" id="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" placeholder="Enter Password" id="pwd">
+              </div>
+             
+              <button type="submit" class="btn btn-primary" [routerLink]="['/welcome']" >Submit</button>
+            
+    
+        </div>
+    </div>
+
+</div>

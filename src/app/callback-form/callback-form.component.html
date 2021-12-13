@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+
+            <form #form="ngForm" ngNativeValidate (ngSubmit)="onSubmit(form)" >
+                <div class="form-group">
+
+                    <label> Name </label>
+                    <input class="form-control"
+                     id="name" name="Name" placeholder="Name" 
+                     [(ngModel)]="defaultUser.Name"  
+                     #name="ngModel"
+                     minlength="5"
+                     >
+
+                </div>
+                <div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert">
+
+  <div *ngIf="name.errors?.['required']" >
+    Name is required.
+  </div>
+  <div *ngIf="name.errors?.['minlength']" class="alert alert-danger" >
+    Name must be at least 4 characters long.
+  </div>
+  <div *ngIf="name.errors?.['forbiddenName']">
+    Name cannot be Bob.
+  </div>
+</div>
+                <div class="form-group">
+                    <label> E-mail </label>
+                    <input class="form-control" type="email" name="Email"  id="Email" placeholder="Email" 
+                    [(ngModel)]="defaultUser.Email"  
+
+                    required   >
+                </div>
+    
+                <div class="form-group">
+                    <label> Phone </label>
+                    <input class="form-control" type="tel" name="Phone" id="Phone" placeholder="Phone" 
+                    [(ngModel)]="defaultUser.Phone"  
+                    >
+                </div>
+    
+                <div class="form-group">
+                    <label> Fund Type </label>
+                    <select name="fundType" id="fundType" class="form-control"
+                    [(ngModel)]="defaultUser.FundType"  
+                    >
+                        <option> Balanced </option>
+                        <option> Secured </option>
+                        <option> Growth </option>
+                        <option> Bond </option>
+    
+                    </select>
+                </div>
+    
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="emailCheck" id="emailCheck" 
+                    [(ngModel)]="defaultUser.emailCheck"  
+                    >
+                    <label for="email">Subscribe to Newsletters</label>
+                </div>
+
+                <div class="alert alert-success" [hidden]="!showMessageOnSuccess" >
+                    {{postError}}
+                </div>
+
+                <div class="alert alert-danger" [hidden]="!isPostError" >
+                    {{postError}}
+                </div>
+    
+                <button class="btn btn-info" type="submit" [disabled]="showSpinner"  >
+                    <span class="spinner-border spinner-border-sm" [hidden]="!showSpinner" ></span>
+                     Get A Callback </button>
+            </form>
+        </div>
+        <div class="col-sm-8">
+            <img src="https://fundguru.sbimf.com/lists/home%20page%20banner/1.png" height="350px" width="720px" >
+        </div>
+
+    </div>
+
+    
+</div>
+
+

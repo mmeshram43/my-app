@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
   searchQuery = '';
   iconUrl : string = '' ;
   fundsArray : IMutualFund[] = [];
+  randomUser : any ;
 
   constructor( private productsService : ProductsService) {
    }
@@ -28,6 +29,14 @@ export class ProductsComponent implements OnInit {
     console.log('In Ng On Init');
     this.iconUrl = this.productsService.iconUrl;
     this.fundsArray = this.productsService.getProducts();
+    // this.randomUser = this.productsService.getRandomUser().subscribe(
+    //   data => {
+    //     this.randomUser = data;
+    //     console.log(data);
+    //     console.log(this.randomUser.results[0]);
+    //   }
+    // );
+    // console.log(this.randomUser);
   }
 
 }
