@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ng-mf-clone": {
+      "hosting": {
+        "my-app": [
+          "ng-mf-clone"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ng-mf-clone"
+  }
+}

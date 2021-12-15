@@ -41,7 +41,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 
       {path:'welcome', component:CarouselComponent },
       {path:'callback', component:CallbackFormComponent },
-      {path:'', component:CarouselComponent,pathMatch:'full' },
+      {path:'', redirectTo:'auth',pathMatch:'full' },
+      {path:'**', redirectTo:'auth',pathMatch:'full' },
 
     ])
   

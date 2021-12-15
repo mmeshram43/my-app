@@ -1,28 +1,48 @@
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-sm-6">
             <h4>
                 Log In Here 
             </h4>
             <hr>
           
-            <form  #form="ngForm" >
+            <form  #form="ngForm" ngNativeValidate >
 
                 <div class="form-group">
                     <label for="email">Email address:</label>
-                    <input type="email" class="form-control" placeholder="Enter email" id="email" name="email" ngModel >
+                    <input type="email" class="form-control" placeholder="Enter email" id="email" name="email"
+                    required
+                     ngModel >
                   </div>
                   
                   <div class="form-group">
                     <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" placeholder="Enter password" id="pwd" name="password" ngModel >
+                    <input type="password" class="form-control" placeholder="Enter password" id="pwd" name="password"
+                    required
+                    ngModel >
                   </div>
                   <div class="form-group form-check">
                     <label class="form-check-label">
                       <input class="form-check-input" type="checkbox" name="checkIdentity" id="checkIdentity" ngModel > Remember me
                     </label>
                   </div>
-                  <button type="submit" class="btn btn-primary" (click)="onLogin(form)"  >Log In</button>
+                  <div class="alert alert-danger" [hidden]="!showError" >
+                    {{errorMessage}}
+                  </div>
+                  <button 
+                  type="submit" class="btn btn-primary"
+                  [disabled] = "!form.valid"
+                   (click)="onLogin(form)">
+                    <span class="spinner-border spinner-border-sm" [hidden]="!showSpinner" ></span>
+                     Log In </button> |
+                  <button 
+                  type="submit" class="btn btn-info"
+                   (click)="onSignUp(form)"
+                   [disabled] = "!form.valid" 
+                    >
+                    <span class="spinner-border spinner-border-sm" [hidden]="!showSpinner" ></span>
+                    Sign Up </button>
+
                 
 
             </form>
@@ -30,7 +50,7 @@
 
             
      
-        <div class="col">
+        <!-- <div class="col">
             <h4>
                 Sign Up  Here 
             </h4>
@@ -56,7 +76,8 @@
               <button type="submit" class="btn btn-primary" [routerLink]="['/welcome']" >Submit</button>
             
     
-        </div>
+        </div> -->
+
     </div>
 
 </div>

@@ -1,7 +1,10 @@
 <div class="container">
     <div class="form-group">
-        <label for="usr">Search Funds:</label>
-        <input [(ngModel)]='searchQuery' type="text" class="form-control" id="usr">
+        <input 
+         type="text" class="form-control" 
+         placeholder="Search Funds" id="usr"
+         [(ngModel)]="searchQuery"
+         >
       </div>
       <br>
     <table class="table table-hover">
@@ -15,7 +18,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let i of fundsArray">
+        <tr *ngFor="let i of filteredArray ">
         <td> <img [hidden]="showImage"  [src]="iconUrl" style="height: 40px; width: 40px; " >  </td>
           <td>{{i.Name}}</td>
           <td>{{i.Risk}}</td>

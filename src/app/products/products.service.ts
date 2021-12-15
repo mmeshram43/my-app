@@ -15,7 +15,20 @@ export class ProductsService{
       {Name: "Focused Equity Fund",Risk : "Very High",CAGR : "12.5 %" ,Rating :'4',ProductId: 102,Category :"EQUITY", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'Semsex',FundManager :'Mr. V Naidu', AUM: "5121 CR" },
       {Name: "Magnum Constant Maturity Fund", Risk : "Medium",CAGR : "6 %" ,Rating :'3',ProductId: 104,Category :"DEBT", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'GILT',FundManager :'Mr. R K Patil', AUM : '12142 CR' },
       {Name: "Equity Hybrid Fund", Risk : "Medium",CAGR : "6 %" ,Rating :'5',ProductId: 105,Category :"EQUITY", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'Nifty 50',FundManager :'Mr. R Shastri' ,AUM : '1478 CR' },
-      {Name: "Debt Hybrid Fund", Risk : "Medium",CAGR : "6.5 %" ,Rating :'4',ProductId: 106,Category :"HYBRID", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'Debt Index ',FundManager :'Mrs. Sohini Andani', AUM : '14786 CR'  }
+      {Name: "Debt Hybrid Fund", Risk : "Medium",CAGR : "6.5 %" ,Rating :'4',ProductId: 106,Category :"HYBRID", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'Debt Index ',FundManager :'Mrs. Sohini Andani', AUM : '14786 CR'  },
+      {Name: "Magnum Debt Fund", Risk : "Medium",CAGR : "6.5 %" ,Rating :'4',ProductId: 107,Category :"HYBRID", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'Debt Index ',FundManager :'Mrs. Sohini Andani', AUM : '1486 CR'  },
+      {Name: "Infrastructure Opputunities Fund", Risk : "High",CAGR : "61.5 %" ,Rating :'4',ProductId: 108,Category :"EQUITY", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'Nifty Index ',FundManager :'Mrs. Sohini Andani', AUM : '14786 CR'  },
+      {Name: "Technology Opputunities Fund", Risk : "High",CAGR : "61.5 %" ,Rating :'4',ProductId: 109,Category :"EQUITY", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'Nifty Index ',FundManager :'Mrs. Sohini Andani', AUM : '14786 CR'  },
+      {Name: "Consumption Opputunities Fund", Risk : "High",CAGR : "61.5 %" ,Rating :'4',ProductId: 110,Category :"EQUITY", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'Nifty Index ',FundManager :'Mrs. Sohini Andani', AUM : '14786 CR'  },
+      {Name: "Banking And Financial Fund", Risk : "High",CAGR : "61.5 %" ,Rating :'4',ProductId: 111,Category :"EQUITY", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'Nifty Index ',FundManager :'Mrs. Sohini Andani', AUM : '14786 CR'  },
+      {Name: "Credit Risk Fund", Risk : "High",CAGR : "61.5 %" ,Rating :'4',ProductId: 112,Category :"EQUITY", ExitLoad : "1%", LaunchDate : '01-01-2006', Benchmark:'Nifty Index ',FundManager :'Mrs. Sohini Andani', AUM : '14786 CR'  },
+
+
+
+
+      
+
+
     ];
 
     constructor( private http : HttpClient ){}
